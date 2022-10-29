@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-x-hidden">
+	<div class="wrapper">
+		<header class="header hidden md:block h-36">
+			<div class="header__top top-header bg-zinc-900 h-20">
+				<div class="top-header__container container h-full mx-auto px-3 flex items-center md:gap-10 gap-3 relative justify-between">
+					<a href="#" class="top-header__img md:flex-none">
+						<img src="img/logo.svg" />
+					</a>
+					<div class="flex-auto md:flex hidden">
+						<input type="text" class="rounded-lg h-10 px-2 text-lg max-w-md flex-auto" placeholder="Найти игру">
+					</div>
+					<a href="#" class="top-header__phone text-white lg:text-xl text-xs font-bold flex-auto md:flex md:items-center hidden justify-center">
+						<img class="mr-2" src="img/phone.svg" alt="">
+						+7 (495) 911-10-11
+					</a>
+					<div class="flex gap-3">
+						<a href="#" class="top-header__profile ">
+							<img src="img/profile.svg" alt="">
+						</a>
+						<a href="#" class="top-header__profile">
+							<img src="img/cart.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom bottom-header bg-gray-50 h-16">
+				<nav class="bottom-header__container container mx-auto px-3 h-full flex items-center">
+					<ul class="bottom-header__list flex justify-between w-full">
+						<li class="bottom-header__item">
+							<a href="#" id="open-popup-btn" class="flex gap-4 text-base font-medium">
+								<img src="img/menu-icon.svg" alt="">
+								Каталог
+							</a>
+						</li>
+						<li class="bottom-header__item">
+							<a href="#" class="text-base font-medium">
+								Wharhammer
+							</a>
+						</li>
+						<li class="bottom-header__item">
+							<a href="#" class="text-base font-medium">
+								Magic:the Cathering
+							</a>
+						</li>
+						<li class="bottom-header__item">
+							<a href="#" class="text-base font-medium">
+								Мероприятия
+							</a>
+						</li>
+						<li class="bottom-header__item">
+							<a href="#" class="text-base font-medium">
+								О центре
+							</a>
+						</li>
+						<li class="bottom-header__item">
+							<a href="#" class="text-base font-medium">
+								Контакты
+							</a>
+						</li>
+						<li class="bottom-header__item flex gap-2">
+							<a href="#">
+								<img src="img/inst.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vk.svg" alt="">
+							</a>
+							<a href="#">
+								<img src="img/fb.svg" alt="">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<header class="mobile-header h-32 md:hidden block">
+			<div class="top-mobile-header h-20 w-full px-2 bg-zinc-900">
+				<div class="top-mobile-header__container container mx-auto h-full flex justify-between items-center">
+					<div class="grow">
+						<button class="w-7 h-5 flex flex-col justify-between">
+							<span class="block w-7 h-[3px] bg-white"></span><span class="block w-7 h-[3px] bg-white"></span><span class="block w-7 h-[3px] bg-white"></span>
+						</button>
+					</div>
+					<a href="" class="top-modile-header__logo grow">
+						<img src="img/logo-mobile.svg">
+					</a>
+
+				</div>
+			</div>
+			<div class="bottom-mobile-header px-2 h-12 w-full">
+				<div class="top-mobile-header__container container mx-auto h-full flex items-center">
+					<input type="text" placeholder="Найти" class="focus:outline-none px-3 py-1 w-full after:content-['123']">
+				</div>
+			</div>
+		</header>
+		<div id="popup" class="hidden absolute z-10 top-0 left-0 bg-black/[0.6] w-screen h-screen">
+			<div class="container relative z-40 mx-auto mt-20 bg-white bg-cover flex justify-between">
+				<nav class="menu w-60 h-110 border-r-2 border-gray-300">
+					<div class="toggle w-60 h-12 px-3 flex items-center border-b-2 border-gray-300">
+						<a href="" id="close-popup-btn" class="flex gap-4 font-medium"><img src="img/menu-icon-toggle.svg" alt="">Все категории</a>
+					</div>
+					<div class="categories w-60 grid grid-row-8">
+						<a href="#info-1" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Настольные игры
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-2" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Warhammer 40000
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-3" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Magic: the Gathering
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-4" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Аксессуары для игр
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-5" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Краски
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-6" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Товары для детей
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-7" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Аксессуары
+							<img src="img/right.svg" alt="">
+						</a>
+						<a href="#info-8" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
+							Для моделизма
+							<img src="img/right.svg" alt="">
+						</a>
+					</div>
+				</nav>
+				<div id="info-1" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Настольные игры</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-2" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Warhammer 40000</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-3" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Magic: the Gathering</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-4" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Аксессуары для игр</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-5" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Краски</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-6" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Товары для детей</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-7" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Аксессуары</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+				<div id="info-8" class="hidden info px-3 w-full">
+					<div class="w-full h-12 flex items-center">
+						<h2 class="font-medium text-xl">Для моделизма</h2>
+					</div>
+					<div class="grid grid-cols-3 py-3">
+						<div>123</div>
+						<div>123</div>
+						<div>123</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</html>
