@@ -83,8 +83,8 @@
 			<div class="top-mobile-header h-20 w-full px-2 bg-zinc-900">
 				<div class="top-mobile-header__container container mx-auto h-full flex justify-between items-center">
 					<div class="grow">
-						<button class="w-7 h-5 flex flex-col justify-between">
-							<span class="block w-7 h-[3px] bg-white"></span><span class="block w-7 h-[3px] bg-white"></span><span class="block w-7 h-[3px] bg-white"></span>
+						<button id="mobile-header__icon" class="w-7 h-5 flex flex-col justify-between">
+							<img src="img/burger.svg" alt="">
 						</button>
 					</div>
 					<a href="" class="top-modile-header__logo grow">
@@ -95,132 +95,57 @@
 			</div>
 			<div class="bottom-mobile-header px-2 h-12 w-full">
 				<div class="top-mobile-header__container container mx-auto h-full flex items-center">
-					<input type="text" placeholder="Найти" class="focus:outline-none px-3 py-1 w-full after:content-['123']">
+					<input type="text" placeholder="Найти" class="focus:outline-none px-3 py-1 w-full after:content-['123'] after:block after:w-10 after:h-10 after:bg-[url('img/seatch-icon.svg')]">
 				</div>
 			</div>
 		</header>
-		<div id="popup" class="hidden absolute z-10 top-0 left-0 bg-black/[0.6] w-screen h-screen">
-			<div class="container relative z-40 mx-auto mt-20 bg-white bg-cover flex justify-between">
-				<nav class="menu w-60 h-110 border-r-2 border-gray-300">
-					<div class="toggle w-60 h-12 px-3 flex items-center border-b-2 border-gray-300">
-						<a href="" id="close-popup-btn" class="flex gap-4 font-medium"><img src="img/menu-icon-toggle.svg" alt="">Все категории</a>
-					</div>
-					<div class="categories w-60 grid grid-row-8">
-						<a href="#info-1" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Настольные игры
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-2" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Warhammer 40000
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-3" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Magic: the Gathering
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-4" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Аксессуары для игр
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-5" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Краски
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-6" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Товары для детей
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-7" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Аксессуары
-							<img src="img/right.svg" alt="">
-						</a>
-						<a href="#info-8" class="cat-link cursor-pointer px-3 h-12 flex items-center justify-between hover:bg-orange-400">
-							Для моделизма
-							<img src="img/right.svg" alt="">
-						</a>
+		<div id="popup" class="hidden fixed w-screen h-screen top-0 left-0 bg-black/[60%] flex justify-center overflow-auto">
+			<div class="absolute top-20 container flex justify-between h-[395px] bg-white">
+				<nav class="menu w-64 h-full border-r-2 border-gray-300 flex flex-col">
+					<a href="#" class="flex gap-4 px-8 py-3 font-medium border-b-2 border-gray-300" id="close-popup-btn"><img src="img/menu-icon-toggle.svg" alt="">Все категории</a>
+					<div class="flex-auto grid grid-rows-8">
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
+						<a href="" class="cat-link hover:bg-orange-400 flex items-center justify-between px-8">123 <img class="cat-img" src="img/right-def.svg" alt=""></a>
 					</div>
 				</nav>
-				<div id="info-1" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Настольные игры</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-2" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Warhammer 40000</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-3" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Magic: the Gathering</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-4" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Аксессуары для игр</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-5" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Краски</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-6" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Товары для детей</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-7" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Аксессуары</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
-				</div>
-				<div id="info-8" class="hidden info px-3 w-full">
-					<div class="w-full h-12 flex items-center">
-						<h2 class="font-medium text-xl">Для моделизма</h2>
-					</div>
-					<div class="grid grid-cols-3 py-3">
-						<div>123</div>
-						<div>123</div>
-						<div>123</div>
-					</div>
+				<div id="popup-content" class="hidden flex-auto h-full px-3 py-2">
+					<h2 class="font-medium text-2xl pb-2">123</h2>
+					<ul class="grid grid-cols-3 grid-rows-4 gap-2">
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+						<li>123</li>
+					</ul>
 				</div>
 			</div>
+		</div>
+		<div id="popup-mobile" class="hidden fixed top-20 left-0 w-screen h-screen bg-black/[60%] overflow-auto">
+			<nav class="absolute top-0 w-[90%] bg-white">
+				<ul>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123321</a></li>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </body>
