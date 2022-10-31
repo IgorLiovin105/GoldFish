@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="slider.css">
 </head>
 <body class="overflow-x-hidden">
 	<div class="wrapper">
@@ -14,7 +15,7 @@
 						<img src="img/logo.svg" />
 					</a>
 					<div class="flex-auto items-center md:flex hidden relative">
-						<input type="text" class="rounded-lg h-10 px-2 text-lg max-w-md flex-auto" placeholder="Найти игру">
+						<input type="text" class="rounded-lg h-10 px-2 text-lg w-full flex-auto" placeholder="Найти игру">
 						<button class="w-5 h-5 absolute right-3">
 							<img src="img/seatch-icon.svg" alt="">
 						</button>
@@ -112,7 +113,7 @@
 				</div>
 			</div>
 		</header>
-		<div id="popup" class="hidden fixed w-screen h-screen top-0 left-0 bg-black/[60%] flex justify-center overflow-auto">
+		<div id="popup" class="hidden fixed w-screen h-screen top-0 left-0 z-10 bg-black/[60%] flex justify-center overflow-auto">
 			<div class="absolute top-20 container flex justify-between h-[395px] bg-white">
 				<nav class="menu w-64 h-full border-r-2 border-gray-300 flex flex-col">
 					<a href="#" class="flex gap-4 px-8 py-3 font-medium border-b-2 border-gray-300" id="close-popup-btn"><img src="img/menu-icon-toggle.svg" alt="">Все категории</a>
@@ -146,8 +147,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="popup-mobile" class="hidden fixed top-0 bottom-20 left-0 w-screen h-full bg-black/[60%] overflow-auto">
-			<nav class="absolute top-20 w-[90%] bg-white">
+		<div id="popup-mobile" class="hidden fixed z-20 top-0 left-0 w-screen h-full bg-black/[60%] overflow-auto">
+			<nav class="absolute py-2 top-20 w-[90%] bg-white">
 				<ul>
 					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="">123</a></li>
 					<li><a class="popup-mobile__link block p-2 hover:bg-orange-400" href="#">123</a></li>
@@ -160,8 +161,209 @@
 				</ul>
 			</nav>
 		</div>
+		<main class="main">
+			<section class="slider relative">
+				<div class="slide w-full h-full block relative pb-[56.25%]">
+					<img class="absolute top-0 left-0 w-full h-full object-cover" src="img/slider/slide 1.jpg" alt="">
+					<div class="absolute bottom-2 left-1 md:bottom-10 md:left-5 text-white">
+						<p class="md:text-lg text-sm">Самая популярная карточная игра</p>
+						<h2 class="md:text-2xl font-medium">Magic: the Gathering</h2>
+					</div>
+					<button class="md:text-lg text-sm text-white font-medium md:rounded-xl rounded-lg bg-orange-400 md:px-7 md:py-2 px-3 py-1 absolute bottom-2 right-1 md:bottom-10 md:right-5">Подробнее</button>
+				</div>
+				<div class="slide w-full h-full block relative pb-[56.25%]">
+					<img class="absolute top-0 left-0 w-full h-full object-cover" src="img/slider/slide 2.jpg" alt="">
+					<div class="absolute bottom-2 left-1 md:bottom-10 md:left-5 text-white">
+						<p class="md:text-lg text-sm">Попробуй игры разных жанров</p>
+						<h2 class="md:text-2xl font-medium">Весь католог </h2>
+					</div>
+					<button class="md:text-lg text-sm text-white font-medium md:rounded-xl rounded-lg bg-orange-400 md:px-7 md:py-2 px-3 py-1 absolute bottom-2 right-1 md:bottom-10 md:right-5">Подробнее</button>
+				</div>
+				<div class="slide w-full h-full block relative pb-[56.25%]">
+					<img class="absolute top-0 left-0 w-full h-full object-cover" src="img/slider/slide 3.jpg" alt="">
+					<div class="absolute bottom-2 left-1 md:bottom-10 md:left-5 text-white">
+						<p class="md:text-lg text-sm">Настольная игра варгейм</p>
+						<h2 class="md:text-2xl font-medium">Warhmmer games</h2>
+					</div>
+					<button class="md:text-lg text-sm text-white font-medium md:rounded-xl rounded-lg bg-orange-400 md:px-7 md:py-2 px-3 py-1 absolute bottom-2 right-1 md:bottom-10 md:right-5">Подробнее</button>
+				</div>
+			</section>
+			<section class="catalog">
+				<div class="container mx-auto px-3 pt-10">
+					<h1 class="font-medium text-2xl pb-6">Каталог</h1>
+					<div class="grid md:grid-cols-4 grid-cols-1 grid-rows-2 gap-5">
+						<div class="md:col-span-2 md:row-span-2 relative">
+							<img class="w-full h-full object-cover rounded-xl" src="img/catalog/image 1.jpg" alt="">
+							<a href="#" class="absolute bottom-0 left-0 w-full rounded-b-xl bg-gray-800 p-4 text-white hover:text-orange-400 font-medium text-xl">Настольные игры</a>
+						</div>
+						<div class="relative">
+							<img class="w-full h-full object-cover rounded-xl" src="img/catalog/image 2.jpg" alt="">
+							<a href="#" class="absolute bottom-0 left-0 w-full rounded-b-xl bg-gray-800 p-4 text-white hover:text-orange-400 font-medium text-xl">Варгеймы</a>
+						</div>
+						<div class="relative">
+							<img class="w-full h-full object-cover rounded-xl" src="img/catalog/image 3.jpg" alt="">
+							<a href="#" class="absolute bottom-0 left-0 w-full rounded-b-xl bg-gray-800 p-4 text-white hover:text-orange-400 font-medium text-xl">Краски</a>
+						</div>
+						<div class="relative">
+							<img class="w-full h-full object-cover rounded-xl" src="img/catalog/image 4.jpg" alt="">
+							<a href="#" class="absolute bottom-0 left-0 w-full rounded-b-xl bg-gray-800 p-4 text-white hover:text-orange-400 font-medium text-xl">Magic:the Cathering</a>
+						</div>
+						<div class="relative">
+							<img class="w-full h-full object-cover rounded-xl" src="img/catalog/image 5.jpg" alt="">
+							<a href="#" class="absolute bottom-0 left-0 w-full rounded-b-xl bg-gray-800 p-4 text-white hover:text-orange-400 font-medium text-xl">Весь каталог</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container mx-auto px-3 pt-10 pb-10">
+				<h1 class="font-medium text-2xl pb-6">Успей купить</h1>
+				<div class="grid xl:grid-cols-4 md:grid-cols-2 gap-7">
+					<div class="card h-[410px] px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2">
+							<img class="h-full mx-auto" src="img/slider2/image 1.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Warhammer 40,000: Chaos Space Marines</h2>
+						<p class="font-bold text-2xl text-center pb-2">3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2">
+							<img class="h-full mx-auto" src="img/slider2/image 2.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">На марсе</h2>
+						<p class="font-bold text-2xl text-center pb-2">3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2">
+							<img class="h-full mx-auto" src="img/slider2/image 3.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Broken Realms: Horrek's Dreadlance</h2>
+						<p class="font-bold text-2xl text-center pb-2">3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2">
+							<img class="h-full mx-auto" src="img/slider2/image 4.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Orks: Ghazghkull Thraka Коллекционный выпуск</h2>
+						<p class="font-bold text-2xl text-center pb-2">3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-lg text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container mx-auto px-3 pt-10 pb-10">
+				<h1 class="font-medium text-2xl pb-6">Специальные предложения</h1>
+				<div class="grid xl:grid-cols-4 md:grid-cols-2 gap-7">
+					<div class="card h-[410px] px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2 relative">
+							<div class="absolute top-0 right-0 bg-orange-400 text-white font-medium py-1 px-4 rounded-full">-15%</div>
+							<img class="h-full mx-auto" src="img/slider2/image 5.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Warhammer 40,000: Chaos Space Marines</h2>
+						<p class="font-bold text-2xl text-center pb-2"><span class="font-normal text-lg line-through">4350 ₽</span> 3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2 relative">
+							<div class="absolute top-0 right-0 bg-orange-400 text-white font-medium py-1 px-4 rounded-full">-15%</div>
+							<img class="h-full mx-auto" src="img/slider2/image 6.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Warhammer 40,000: Chaos Space Marines</h2>
+						<p class="font-bold text-2xl text-center pb-2"><span class="font-normal text-lg line-through">4350 ₽</span> 3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2 relative">
+							<div class="absolute top-0 right-0 bg-orange-400 text-white font-medium py-1 px-4 rounded-full">-15%</div>
+							<img class="h-full mx-auto" src="img/slider2/image 7.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Warhammer 40,000: Chaos Space Marines</h2>
+						<p class="font-bold text-2xl text-center pb-2"><span class="font-normal text-lg line-through">4350 ₽</span>  3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+					<div class="card px-[30px] py-[15px] shadow-[5px_6px_16px_rgba(42,42,42,.16)] rounded-xl">
+						<div class="h-40 pb-2 relative">
+							<div class="absolute top-0 right-0 bg-orange-400 text-white font-medium py-1 px-4 rounded-full">-15%</div>
+							<img class="h-full mx-auto" src="img/slider2/image 8.png" alt="">
+						</div>
+						<div class="flex justify-between pb-2">
+							<span class="flex gap-1"><img src="img/slider2/players.svg" alt=""> 2-4</span>
+							<span class="flex gap-1"><img src="img/slider2/clock.svg" alt=""> 30-60</span>
+							<span>18+</span>
+						</div>
+						<h2 class="font-medium text-xl text-center h-14 pb-2">Warhammer 40,000: Chaos Space Marines</h2>
+						<p class="font-bold text-2xl text-center pb-2"><span class="font-normal text-lg line-through">4350 ₽</span> 3657 ₽</p>
+						<div class="flex flex-col gap-2 items-center">
+							<button class="w-40 py-2 bg-orange-400 text-lg text-white font-medium rounded-xl flex justify-center items-center gap-2">В корзину <img src="img/slider2/cart.svg" alt=""></button>
+							<button class="w-40 py-2 border-4 border-orange-400 text-orange-400 font-medium rounded-xl flex justify-center">Купить в 1 клик</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container mx-auto px-3 pt-10 pb-10">
+				<h1 class="font-medium text-2xl pb-6">Близжайшие мероприятия</h1>
+			</section>
+		</main>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.min.js"></script>
 <script src="js/index.js"></script>
 </html>

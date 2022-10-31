@@ -1,0 +1,25 @@
+.slider .slick-track {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 5px;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-arrow {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 0;
+	width: 24px;
+	height: 24px;
+}
+.slider .slick-arrow.slick-prev {
+	left: 24px;
+	background: url('img/slider/prev.svg') 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+	right: 24px;
+	background: url('img/slider/next.svg') 0 0 / 100% no-repeat;
+}

@@ -26,8 +26,31 @@ $('.popup-mobile__link').click(function (e) {
 })
 $('#mobile-header__icon').click(function () {
 	$('#popup-mobile').toggleClass('hidden')
+	$('body').toggleClass('overflow-hidden')
 	if ($('#popup-mobile').hasClass('hidden')) {
 		return $(this).children('img').attr('src', 'img/burger.svg')
 	}
 	$(this).children('img').attr('src', 'img/burger-open.svg')
+})
+$('.slider').slick({
+	arrows: true,
+	slidesToShow: 1,
+	centerMode: true,
+	centerPadding: '20%',
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				centerPadding: '10%',
+				arrows: false
+			}
+		},
+		{
+			breakpoint: 575,
+			settings: {
+				centerMode: false,
+				arrows: false
+			}
+		}
+	]
 })
