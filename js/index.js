@@ -54,3 +54,21 @@ $('.slider').slick({
 		}
 	]
 })
+$('#catalog__link').click(function (e) {
+	e.preventDefault()
+	$('.card').toggleClass('hidden')
+	$(this).children('img').toggleClass('rotate-[-90deg]')
+	if ($('.card').hasClass('hidden')) {
+		return $(this).children('span').html('Показать другие')
+	}
+	$(this).children('span').html('Скрыть другие')
+})
+$('#catalog2__link').click(function (e) {
+	e.preventDefault()
+	$('.card2').toggleClass('hidden')
+	$(this).children('img').toggleClass('rotate-[-90deg]')
+	if ($('.card2').hasClass('hidden')) {
+		return $(this).children('span').html('Показать другие')
+	}
+	$(this).children('span').html('Скрыть другие')
+})
