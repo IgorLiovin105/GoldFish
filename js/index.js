@@ -21,6 +21,7 @@ $('.cat-link').click(function (e) {
 })
 $('.popup-mobile__link').click(function (e) {
 	e.preventDefault()
+	$('body').removeClass('overflow-hidden')
 	$('#popup-mobile').addClass('hidden')
 	$('#mobile-header__icon').children('img').attr('src', 'img/burger.svg')
 })
